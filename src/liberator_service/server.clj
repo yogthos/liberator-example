@@ -17,8 +17,7 @@
   (routes   
     (GET "/" [] home)       
     (POST "/login" [] login)
-    (POST "/logout" [] logout)
-    (GET "/user-info" [] user-info)
+    (POST "/logout" [] logout)    
     (GET "/resources/:resource" [resource] static)))
 
 (defn create-handler []

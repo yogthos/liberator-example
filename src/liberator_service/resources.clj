@@ -11,14 +11,6 @@
 (defn valid-user [user]
   (some #(= user (select-keys % [:user :pass])) users))
 
-(defresource user-info
-  :available-media-types ["application/json" "text/javascript"]
-  :method-allowed? (and (session-get :user) (request-method-in :get))
-  :handle-ok       (->> users
-                     (filter #(= (session-get :user) (get-in % [:user])))
-                     first
-                     json-str))
-
 (defresource login
   :available-media-types ["application/json" "text/javascript"]
   :method-allowed? (request-method-in :post)  
