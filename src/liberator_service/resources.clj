@@ -33,7 +33,6 @@
 
 (defresource logout
   :available-media-types ["application/json" "text/javascript"]
-  :method-allowed? (fn [{{{user :user} :session} :request}] 
-                     (request-method-in :post))  
+  :method-allowed? (request-method-in :post)  
   :post!           (session-delete-key! :user)
   :handle-created  (json-str {:message "logout successful"}))
