@@ -10,6 +10,5 @@
                  [org.clojure/data.json "0.1.2"]
                  [ring/ring-jetty-adapter "1.1.0"]]
   :dev-dependencies [[lein-ring "0.7.3"]]
-  :ring {:handler liberator-service.server/handler
-         :adapter {:port 8000}}
+  :ring {:handler liberator-service.server/handler}
   :main liberator-service.server)

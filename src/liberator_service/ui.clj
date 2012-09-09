@@ -14,7 +14,7 @@
    [:div#message]
    [:div#login
     (text-field "user")
-    (text-field "pass")
+    (password-field "pass")
     [:button {:type "button" :onclick "login()"} "login"]]])
 
 (defn home-page [] 
