@@ -13,7 +13,7 @@ function getUserInfo() {
 	    	   },
 	    	   "json")
 	     .error( function(xhr, textStatus, errorThrown) {       			 
-       			 $("#message").text(xhr.responseText + " " + textStatus);
+       			 $("#message").text(textStatus + ": " + xhr.responseText);
     	 });
 	}
 	

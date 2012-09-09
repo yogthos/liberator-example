@@ -5,8 +5,7 @@
         sandbar.stateful-session
         compojure.core 
         [compojure.handler :only [api]]
-        hiccup.page
-        hiccup.element        
+        liberator-service.ui
         liberator-service.resources
         liberator-service.static-resources)
   (:require
