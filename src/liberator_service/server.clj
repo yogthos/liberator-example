@@ -35,6 +35,9 @@
           ".json" "application/json"})) 
       request)))
 
+(defn handler [request] 
+  ((create-handler) request))
+
 (defn start [options]
   (jetty/run-jetty
    (fn [request]
