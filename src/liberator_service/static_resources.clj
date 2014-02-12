@@ -17,7 +17,7 @@
          [(.exists f) {::file f}]))
     
     :handle-ok (fn [{{{file :resource} :route-params} :request}]                 
-                 (io/file static-dir file)))
+                 (io/file static-dir file))
 
     :last-modified (fn [{{{file :resource} :route-params} :request}]                                                               
                      (.lastModified (io/file static-dir file))))
