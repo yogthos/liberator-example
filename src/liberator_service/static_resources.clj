@@ -20,4 +20,4 @@
                  (io/file static-dir file))
 
     :last-modified (fn [{{{file :resource} :route-params} :request}]                                                               
-                     (.lastModified (io/file static-dir file))))
+                     (.lastModified (io/file static-dir file)))))
